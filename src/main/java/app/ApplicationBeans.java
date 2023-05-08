@@ -24,6 +24,8 @@ public class ApplicationBeans {
     mm.getConfiguration().setFieldMatchingEnabled(true).setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE);
     return mm;
   }
+
+
 //
 //  @Profile("local")
 //  @Bean

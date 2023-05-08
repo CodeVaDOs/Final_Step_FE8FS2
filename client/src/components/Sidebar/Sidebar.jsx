@@ -12,6 +12,7 @@ import { Avatar, Box, Stack, Toolbar } from '@mui/material';
 import { SidebarFooter } from './SidebarFooter/SidebarFooter';
 import { SidebarDropdown } from './SidebarDropdown/SidebarDropdown';
 import Button from '@mui/material/Button';
+import axios from "axios";
 
 
 
@@ -109,6 +110,14 @@ export const Sidebar = () => {
                 backgroundColor: 'rgb(26, 140, 216)'
               }
             }}
+                  onClick={() => {
+                      axios.post("api/v1/auth/register", {
+                          "fullName": "Homer",
+                          "userTag": "DUFF",
+                          "email": "111@gmail.com",
+                          "password": "111"
+                      }).then(r => console.log(r))
+                  }}
           >
             Tweet
           </Button>
