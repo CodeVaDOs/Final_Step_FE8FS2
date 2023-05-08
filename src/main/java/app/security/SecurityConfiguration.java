@@ -32,6 +32,7 @@ public class SecurityConfiguration {
       .antMatchers("/create").permitAll()
       .antMatchers("/api/v1/auth/register").permitAll()
       .antMatchers("/h2-console/**").permitAll()
+      .antMatchers("/swagger-ui").permitAll()
       .antMatchers("/api/v1/auth/login/**").authenticated()  //end points need to specified
       .antMatchers("/test").authenticated()           //need to be replaced for specified end points later
       .anyRequest().authenticated();
